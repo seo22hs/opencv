@@ -2,14 +2,14 @@ import cv2 as cv
 import numpy as np
 
 # 1. 이미지 읽기 (그레이스케일)
-img = cv.imread('img/shapes.png', cv.IMREAD_GRAYSCALE)
+img = cv.imread('img/fish.jpg', cv.IMREAD_GRAYSCALE)
 
 if img is None:
     print("이미지 못 읽음")
     exit()
 
 # 2. 이진화
-ret, binary = cv.threshold(img, 127, 255, cv.THRESH_BINARY_INV)
+ret, binary = cv.threshold(img, 127, 255, cv.THRESH_BINARY)
 
 # 3. 컨투어 찾기
 contours, hierarchy = cv.findContours(
