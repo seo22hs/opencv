@@ -18,8 +18,8 @@ gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 # ============================================================
 # 1. Canny 에지 검출
 # ============================================================
-threshold1 = 100
-threshold2 = 200
+threshold1 = 50
+threshold2 = 150
 
 edges = cv.Canny(gray, threshold1, threshold2)
 
