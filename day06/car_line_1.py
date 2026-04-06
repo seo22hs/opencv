@@ -8,7 +8,7 @@ if img is None:
     exit(1)
 
 # 축소 (처리 속도 향상)
-scale = 0.25
+scale = 0.4
 img_resized = cv.resize(img, (int(img.shape[1]*scale), int(img.shape[0]*scale)))
 
 # 2단계: 그레이스케일 변환
@@ -39,4 +39,4 @@ cv.waitKey(0)
 cv.destroyAllWindows()
 
 # 결과 저장
-cv.imwrite('car_line_detected.jpg', result)
+# cv.imwrite('car_line_detected.jpg', result)
