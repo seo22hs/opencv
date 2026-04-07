@@ -107,6 +107,7 @@ if len(good_matches) >= MIN_MATCH_COUNT:
         dst = cv.perspectiveTransform(pts, M)
 
         # ========== Step 5: 결과 시각화 ==========
+        img2 = cv.cvtColor(img2, cv.COLOR_GRAY2BGR)
         result_img = img2.copy()
 
         # 🔥 핵심: 변환된 사각형 그리기
