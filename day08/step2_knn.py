@@ -14,7 +14,6 @@ print(f"테스트 데이터: {test.shape[0]}개 샘플")
 
 knn = cv2.ml.KNearest_create()
 knn.train(train, cv2.ml.ROW_SAMPLE, train_labels)
-
 print("✅ k-NN 모델 훈련 완료")
 
 # ③ k값을 1~10까지 변경하며 정확도 측정 ---
@@ -50,6 +49,7 @@ for k in range(1, 21):
 # 최적 k값 찾기
 
 best_k = max(accuracies, key=accuracies.get)
+
 best_acc = accuracies[best_k]
 
 print(f"\n✅ 최적 k값: {best_k} (정확도: {best_acc:.2f}%)")
